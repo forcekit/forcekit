@@ -4,7 +4,7 @@ This is only for educational perpose.
 
 It's using zeit serverless architecture with lambda functions.
 
-Check the demo [https://forcekit.forcekit.now.sh](demo)
+Check the [demo](https://forcekit.forcekit.now.sh)
 
 ## Currenty supported platforms
 
