@@ -1,0 +1,11 @@
+.Header {
+	height: 44px;
+	background-color: rgb(59, 89, 152);
+}
+
+.Header img {
+	height: 21px;
+	display: block;
+	margin: auto;
+	padding-top: 13px;
+}
