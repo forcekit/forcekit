@@ -2,6 +2,8 @@
 
 This is only for educational perpose. 
 
+It's using zeit serverless architecture with lambda functions.
+
 ## Currenty supported platforms
 
 * Facebook Mobile

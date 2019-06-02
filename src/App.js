@@ -1,14 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-import MobileLayout from './containers/MobileLayout/MobileLayout';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import Home from './containers/Home/Home';
+import FacebookMobileLayout from './containers/Facebook/MobileLayout/MobileLayout';
 
 function App() {
   return (
-    <div className="App">
-      <MobileLayout />
-    </div>
+  	<Router>
+	    <div className="App">
+	    	<Route path="/" exact component={Home} />
+	      	<Route path="/facebook" component={FacebookMobileLayout} />
+	    </div>
+    </Router>
   );
 }
 
