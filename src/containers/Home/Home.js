@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 
 class Home extends React.Component {
 
+	componentDidMount() {
+	    document.title = 'Home';
+	}
+
 	render(){
 		return (
 			<div>

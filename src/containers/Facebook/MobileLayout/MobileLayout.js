@@ -7,6 +7,10 @@ import Footer from '../../../components/Facebook/MobileLayout/Footer/Footer';
 
 class MobileLayout extends React.Component {
 
+	componentDidMount() {
+	    document.title = 'Facebook';
+	}
+
 	render(){
 		return (
 			<div className={styles.MobileLayout}>
