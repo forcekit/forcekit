@@ -1,4 +1,4 @@
-# Forcekit Phishing Toolkit
+# Forcekit Phishing Toolkit 🐠
 
 This is only for educational perpose. 
 
