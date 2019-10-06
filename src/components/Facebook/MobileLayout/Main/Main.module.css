@@ -183,3 +183,11 @@
 		width: 70%;
 	}
 }
+
+.Main > div {
+	background: #fa3e3e;
+	color: white;
+	text-align: center;
+	font-size: 14px;
+	padding: 8px;
+}
